@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-
+/*
 public class MyArrayAdapter extends ArrayAdapter<Boton> {
 
     public MyArrayAdapter( Context context, Boton[] botones) {
@@ -64,3 +64,6 @@ public class MyArrayAdapter extends ArrayAdapter<Boton> {
         return b;
     }
 }
+
+
+ */

@@ -1,5 +1,5 @@
 package com.example.mastermind;
-
+/*
 public enum BotonColor {
     SIN_CITY_RED        ("#ED213A","#93291E"),
     CITRUS_PEEL         ("#FDC830", "#F37335"),
@@ -34,3 +34,4 @@ public enum BotonColor {
         return colorNegro;
     }
 }
+*/
