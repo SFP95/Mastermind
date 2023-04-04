@@ -51,6 +51,7 @@ public class MyArrayAdapter extends ArrayAdapter<Boton> {
                     false
             );
             Button boton = v.findViewById(R.id.boton);
+            //boton.setBackgroundColor(Integer.parseInt("#56CCF2"));
             vh = new ViewHolder(boton);
             v.getTag(vh);
 
