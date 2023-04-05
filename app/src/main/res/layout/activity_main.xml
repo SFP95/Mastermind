@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <Button
         android:id="@+id/bComenzar"
         android:layout_width="wrap_content"
@@ -115,7 +113,7 @@
         android:layout_marginEnd="50dp"
         android:text=" "
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/bT2"
+        app:layout_constraintEnd_toStartOf="@+id/bAdivinar2"
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
@@ -129,7 +127,7 @@
         android:layout_marginEnd="50dp"
         android:text=" "
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/bT3"
+        app:layout_constraintEnd_toStartOf="@+id/bAdivinar3"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:layout_constraintVertical_bias="0.518"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
@@ -141,7 +139,7 @@
         android:layout_marginEnd="50dp"
         android:text=" "
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/bT4"
+        app:layout_constraintEnd_toStartOf="@+id/bAdivinar4"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 

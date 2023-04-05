@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -19,10 +20,14 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     int intentos;
-    boolean acierto;
+    int cliks=0;
+    int cliks_max = 4;
+
+
 
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView ltIntentos, ltAciertos;
+    ArrayList<Integer> listaRandomColors = new ArrayList<>();
     private List<Button> listBotonesIntentos, listBotonesAciertos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,25 +39,73 @@ public class MainActivity extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-        intentos=10;
-        acierto= false;
-        reiniciar();
-        while (intentos<=10){
-            reiniciar();
-            generaraColoresRandom();
 
-            if (acierto=true){
+        intentos=0;
+        reiniciar();
+        generaraColoresRandom();
+
+        while (intentos<=10){
+
+            // limitacion de pulsaciones boones colores y comparamos las listas y y mostramoss aciertos
+            vecesPuladasYComparaListas();
+
+            if (intentos==10 || listaRandomColors.equals(ltAciertos) ){
                 acabarPartida();
-                 View negro = findViewById(R.color.negro);
-                 View gris = findViewById(R.color.gris);
             }
         }
     }
 
-    private void acabarPartida() {
+    private void vecesPuladasYComparaListas() {
 
+
+
+
+        //comparamos las listas y y mostramoss tipos de aciertos
+        //recorremos la lista randoms
+        listBotonesIntentos.forEach((intentos)->);
+        listaRandomColors.forEach((numRnd) ->{
+            boolean cohincide = numRnd.equals(intentos);
+        });
+
+
+        switch (cliks == 4){
+            case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos cohinciden
+                bAdivinar1.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar2.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar3.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+                break;
+            case (!ltIntentos.equals(ltAciertos)): //caso absoluto de nunguno cohincide
+                bAdivinar1.setBackgroundColor(getColor(R.color.blanco));
+                bAdivinar2.setBackgroundColor(getColor(R.color.blanco));
+                bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
+                bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
+                break;
+            case (cohincide): // cohincide color pero no la posición
+
+                //cohincide en color y posicion
+                bAdivinar1.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar2.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar3.setBackgroundColor(getColor(R.color.negro));
+                bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+
+                //cohincide en solo color
+                bAdivinar1.setBackgroundColor(getColor(R.color.gris));
+                bAdivinar2.setBackgroundColor(getColor(R.color.gris));
+                bAdivinar3.setBackgroundColor(getColor(R.color.gris));
+                bAdivinar4.setBackgroundColor(getColor(R.color.gris));
+                break;
+        }
     }
 
+    private void acabarPartida() {
+        //mostrar las combianación random en los botonesde arriba
+
+        bAdivinar1.setBackgroundColor(listaRandomColors.get(0));
+        bAdivinar2.setBackgroundColor(listaRandomColors.get(1));
+        bAdivinar3.setBackgroundColor(listaRandomColors.get(2));
+        bAdivinar4.setBackgroundColor(listaRandomColors.get(3));
+    }
     private void reiniciar() {
         bComenzar.setEnabled(true);
         bAdivinar1.setBackgroundColor(getColor(R.color.purple_500));
@@ -85,10 +138,16 @@ public class MainActivity extends AppCompatActivity {
                     R.color.amarillo,
                     R.color.verde
         };
-        bAdivinar1.setBackgroundColor(colores[num]);
+
+        listaRandomColors.add(colores[num]);
+        listaRandomColors.add(colores[num]);
+        listaRandomColors.add(colores[num]);
+        listaRandomColors.add(colores[num]);
+
+      /* bAdivinar1.setBackgroundColor(colores[num]);
         bAdivinar2.setBackgroundColor(colores[num]);
         bAdivinar3.setBackgroundColor(colores[num]);
-        bAdivinar4.setBackgroundColor(colores[num]);
+        bAdivinar4.setBackgroundColor(colores[num]);*/
     }
     private Set<Integer> getFourRandomColors() {
         Set<Integer> set = Collections.emptySet();
