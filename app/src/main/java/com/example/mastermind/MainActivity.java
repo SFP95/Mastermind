@@ -18,9 +18,10 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     int intentos;
-    private Button bVerde,bRojo,bAzul,bAmarillo,bT1,bT2,bT3,bT4;
+    private Button bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView ltIntentos, ltAciertos;
     private List<Button> listBotones;
+    private static final Random rnd = new Random();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,35 +31,39 @@ public class MainActivity extends AppCompatActivity {
         ltIntentos = findViewById(R.id.lv1);
     }
     public void onComenzar(View view) {
+
         intentos=10;
         reiniciar();
         while (true){
             for (int i=0; i<=intentos;i++ ){
-
                 if (i==10){
                     reiniciar();
+                    generaraColoresRandom();
                 }
             }
         }
     }
 
     private void reiniciar() {
-        bT1.setBackgroundColor(getColor(R.color.purple_500));
-        bT2.setBackgroundColor(getColor(R.color.purple_500));
-        bT3.setBackgroundColor(getColor(R.color.purple_500));
-        bT4.setBackgroundColor(getColor(R.color.purple_500));
+        bAdivinar1.setBackgroundColor(getColor(R.color.purple_500));
+        bAdivinar2.setBackgroundColor(getColor(R.color.purple_500));
+        bAdivinar3.setBackgroundColor(getColor(R.color.purple_500));
+        bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
 
     }
 
     private void asignarBotonesColores() {
+        //botones de abajo
         bAzul = (Button) findViewById(R.id.bAzul);
         bAmarillo = (Button) findViewById(R.id.bAmarillo);
         bRojo = (Button) findViewById(R.id.bRojo);
         bVerde = (Button) findViewById(R.id.bVerde);
-        bT1 = (Button) findViewById(R.id.bT1);
-        bT2 = (Button) findViewById(R.id.bT2);
-        bT3 = (Button) findViewById(R.id.bT3);
-        bT4 = (Button) findViewById(R.id.bT4);
+
+        //botones de arriba
+        bAdivinar1 = (Button) findViewById(R.id.bAdivinar1);
+        bAdivinar2 = (Button) findViewById(R.id.bAdivinar2);
+        bAdivinar3 = (Button) findViewById(R.id.bAdivinar2);
+        bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
     }
     public void generaraColoresRandom() {
         Set<Integer> indexColors = getFourRandomColors();
@@ -68,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     R.color.amarillo,
                     R.color.verde
         };
+
+
     }
     private Set<Integer> getFourRandomColors() {
         Set<Integer> set = Collections.emptySet();
