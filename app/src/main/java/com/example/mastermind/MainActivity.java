@@ -57,16 +57,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void vecesPuladasYComparaListas() {
 
-
-
-
         //comparamos las listas y y mostramoss tipos de aciertos
         //recorremos la lista randoms
         listBotonesIntentos.forEach((intentos)->);
         listaRandomColors.forEach((numRnd) ->{
             boolean cohincide = numRnd.equals(intentos);
         });
-
 
         switch (cliks == 4){
             case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos cohinciden
@@ -81,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
                 bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
                 break;
-            case (cohincide): // cohincide color pero no la posición
+            case (): // cohincide color pero no la posición
 
                 //cohincide en color y posicion
                 bAdivinar1.setBackgroundColor(getColor(R.color.negro));
