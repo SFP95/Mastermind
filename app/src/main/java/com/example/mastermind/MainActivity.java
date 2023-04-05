@@ -2,6 +2,7 @@ package com.example.mastermind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -18,10 +19,11 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     int intentos;
-    private Button bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
+    boolean acierto;
+
+    private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView ltIntentos, ltAciertos;
-    private List<Button> listBotones;
-    private static final Random rnd = new Random();
+    private List<Button> listBotonesIntentos, listBotonesAciertos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,29 +32,38 @@ public class MainActivity extends AppCompatActivity {
         ltAciertos = findViewById(R.id.lv2);
         ltIntentos = findViewById(R.id.lv1);
     }
+    @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-
         intentos=10;
+        acierto= false;
         reiniciar();
-        while (true){
-            for (int i=0; i<=intentos;i++ ){
-                if (i==10){
-                    reiniciar();
-                    generaraColoresRandom();
-                }
+        while (intentos<=10){
+            reiniciar();
+            generaraColoresRandom();
+
+            if (acierto=true){
+                acabarPartida();
+                 View negro = findViewById(R.color.negro);
+                 View gris = findViewById(R.color.gris);
             }
         }
     }
 
+    private void acabarPartida() {
+
+    }
+
     private void reiniciar() {
+        bComenzar.setEnabled(true);
         bAdivinar1.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar2.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar3.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
 
     }
-
     private void asignarBotonesColores() {
+        bComenzar = findViewById(R.id.bComenzar);
+
         //botones de abajo
         bAzul = (Button) findViewById(R.id.bAzul);
         bAmarillo = (Button) findViewById(R.id.bAmarillo);
@@ -66,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
     }
     public void generaraColoresRandom() {
+        int num= (int) (Math.random()*4+1);
         Set<Integer> indexColors = getFourRandomColors();
         final int[] colores = {
                     R.color.rojo,
@@ -73,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
                     R.color.amarillo,
                     R.color.verde
         };
-
-
+        bAdivinar1.setBackgroundColor(colores[num]);
+        bAdivinar2.setBackgroundColor(colores[num]);
+        bAdivinar3.setBackgroundColor(colores[num]);
+        bAdivinar4.setBackgroundColor(colores[num]);
     }
     private Set<Integer> getFourRandomColors() {
         Set<Integer> set = Collections.emptySet();
@@ -86,32 +100,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return  set;
     }
-    /*
-    private void cambiarColores() {
-        public void onRojo(View view) {
-
-            bT1.setBackgroundColor(getColor(R.color.rojo));
-            bT2.setBackgroundColor(getColor(R.color.rojo));
-            bT3.setBackgroundColor(getColor(R.color.rojo));
-            bT4.setBackgroundColor(getColor(R.color.rojo));
-        }
-        public void onVerde(View view) {
-            bT1.setBackgroundColor(getColor(R.color.verde));
-            bT2.setBackgroundColor(getColor(R.color.verde));
-            bT3.setBackgroundColor(getColor(R.color.verde));
-            bT4.setBackgroundColor(getColor(R.color.verde));
-        }
-        public void onAmarillo(View view) {
-            bT1.setBackgroundColor(getColor(R.color.amarillo));
-            bT2.setBackgroundColor(getColor(R.color.amarillo));
-            bT3.setBackgroundColor(getColor(R.color.amarillo));
-            bT4.setBackgroundColor(getColor(R.color.amarillo));
-        }
-        public void onAzul(View view) {
-            bT1.setBackgroundColor(getColor(R.color.azul));
-            bT2.setBackgroundColor(getColor(R.color.azul));
-            bT3.setBackgroundColor(getColor(R.color.azul));
-            bT4.setBackgroundColor(getColor(R.color.azul));
-        }
-    }*/
 }
