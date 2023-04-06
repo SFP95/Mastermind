@@ -8,6 +8,11 @@ public class ViewHolder {
     public ViewHolder(Button bonton){
         this.bonton = bonton;
     }
+
+    public ViewHolder() {
+
+    }
+
     public Button getBonton(){
         return bonton;
     }

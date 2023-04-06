@@ -29,8 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView ltIntentos, ltAciertos;
-    ArrayList<Integer> listaRandomColors = new ArrayList<>();
-    private List<Button> listBotonesIntentos, listBotonesAciertos;
+    ArrayList<Integer> listaRandomColors = new ArrayList<>(); //por revisar con gpt
+    //private List<Button> listBotonesIntentos, listBotonesAciertos;
+    //---
+    private  List<Boton> listaBotones = new ArrayList<>();
+    private  List<Boton> botonesSeleccionados = new ArrayList<>();
+    private  List<Boton> botonesNOSeleccionados = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +43,23 @@ public class MainActivity extends AppCompatActivity {
         asignarBotonesColores();
         ltAciertos = findViewById(R.id.lv2);
         ltIntentos = findViewById(R.id.lv1);
+        agregarAlistasBotones();
+
+
+
     }
+
+    private void agregarAlistasBotones() {
+        for (int i = 0; i < listaBotones.size(); i++){
+            Boton b = listaBotones.get(i);
+            if (b.isSelected()){
+                botonesSeleccionados.add(b);
+            }else{
+                botonesNOSeleccionados.add(b);
+            }
+        }
+    }
+
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
 
@@ -77,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //comparamos las listas y y mostramoss tipos de aciertos
 
-                    switch (contadorCliksBotonesMaps.size() <= 4){
+                    switch (contadorCliksBotonesMaps.size() <= 4){ //por repasar bien
                         case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos coinciden
                             bAdivinar1.setBackgroundColor(getColor(R.color.negro));
                             bAdivinar2.setBackgroundColor(getColor(R.color.negro));
