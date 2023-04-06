@@ -14,7 +14,9 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
@@ -56,41 +58,55 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void vecesPuladasYComparaListas() {
+        Map<Integer,Integer> contadorCliksBotonesMaps = new HashMap<>(); //almacenamos los contadores de cata boton en esta variable
 
-        //comparamos las listas y y mostramoss tipos de aciertos
-        //recorremos la lista randoms
-        listBotonesIntentos.forEach((intentos)->);
-        listaRandomColors.forEach((numRnd) ->{
-            boolean cohincide = numRnd.equals(intentos);
-        });
+        Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
 
-        switch (cliks == 4){
-            case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos cohinciden
-                bAdivinar1.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar2.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar3.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar4.setBackgroundColor(getColor(R.color.negro));
-                break;
-            case (!ltIntentos.equals(ltAciertos)): //caso absoluto de nunguno cohincide
-                bAdivinar1.setBackgroundColor(getColor(R.color.blanco));
-                bAdivinar2.setBackgroundColor(getColor(R.color.blanco));
-                bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
-                bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
-                break;
-            case (): // cohincide color pero no la posición
+        for (final Button boton : botonesColores){
 
-                //cohincide en color y posicion
-                bAdivinar1.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar2.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar3.setBackgroundColor(getColor(R.color.negro));
-                bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+            //agregamos contador para cada boton del mapa
+            contadorCliksBotonesMaps.put(boton.getId(),0);
 
-                //cohincide en solo color
-                bAdivinar1.setBackgroundColor(getColor(R.color.gris));
-                bAdivinar2.setBackgroundColor(getColor(R.color.gris));
-                bAdivinar3.setBackgroundColor(getColor(R.color.gris));
-                bAdivinar4.setBackgroundColor(getColor(R.color.gris));
-                break;
+            //definimos el listener para el boton
+            boton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int contadorBoton = contadorCliksBotonesMaps.get(boton.getId());
+                    contadorBoton++;
+                    contadorCliksBotonesMaps.put(boton.getId(),contadorBoton); //cantilizamos el contor del mapa
+
+                    //comparamos las listas y y mostramoss tipos de aciertos
+
+                    switch (contadorCliksBotonesMaps.size() <= 4){
+                        case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos coinciden
+                            bAdivinar1.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar2.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar3.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+                            break;
+                        case (!ltIntentos.equals(ltAciertos)): //caso absoluto de nunguno coincide
+                            bAdivinar1.setBackgroundColor(getColor(R.color.blanco));
+                            bAdivinar2.setBackgroundColor(getColor(R.color.blanco));
+                            bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
+                            bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
+                            break;
+                        case (): // coincide color pero no la posición
+
+                            //coincide en color y posicion
+                            bAdivinar1.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar2.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar3.setBackgroundColor(getColor(R.color.negro));
+                            bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+
+                            //cohincide en solo color
+                            bAdivinar1.setBackgroundColor(getColor(R.color.gris));
+                            bAdivinar2.setBackgroundColor(getColor(R.color.gris));
+                            bAdivinar3.setBackgroundColor(getColor(R.color.gris));
+                            bAdivinar4.setBackgroundColor(getColor(R.color.gris));
+                            break;
+                    }
+                }
+            });
         }
     }
 
