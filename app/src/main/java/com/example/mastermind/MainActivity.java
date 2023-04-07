@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -44,7 +46,42 @@ public class MainActivity extends AppCompatActivity {
         // agregarAlistasBotones();
 
     }
+    private void asignarBotonesColores() {
+        bComenzar = findViewById(R.id.bComenzar);
 
+        //botones de abajo
+        bAzul = (Button) findViewById(R.id.bAzul);
+        bAmarillo = (Button) findViewById(R.id.bAmarillo);
+        bRojo = (Button) findViewById(R.id.bRojo);
+        bVerde = (Button) findViewById(R.id.bVerde);
+
+        //botones de arriba
+        bAdivinar1 = (Button) findViewById(R.id.bAdivinar1);
+        bAdivinar2 = (Button) findViewById(R.id.bAdivinar2);
+        bAdivinar3 = (Button) findViewById(R.id.bAdivinar2);
+        bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
+    }
+    private void asignartListViews() {
+        ltAciertos = findViewById(R.id.lv2);
+        ltIntentos = findViewById(R.id.lv1);
+    }
+    @SuppressLint("ResourceType")
+    public void onComenzar(View view) {
+        intentos=0;
+        reiniciar();
+        borrarContenidoListView();
+        generarBotonesColoresRandom();
+
+        while (intentos<=10){
+            // limitacion de pulsaciones boones colores y comparamos las listas y y mostramoss aciertos
+            vecesPuladasYComparaListas();
+            intentos++;
+
+            if (intentos==10 || listaRandomColors.equals(ltAciertos) ){
+                acabarPartida();
+            }
+        }
+    }
     private void cargarInfoListViews() {
         //iniciamos la lista de botones seleccionados
 
@@ -57,41 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
         ltIntentos.setAdapter(botonesElegidosAdapter);
         ltAciertos.setAdapter(botonesAciertosAdapter);
+
     }
-
-    private void asignartListViews() {
-        ltAciertos = findViewById(R.id.lv2);
-        ltIntentos = findViewById(R.id.lv1);
-    }
-
-    private void agregarAlistasBotones() {
-        for (int i = 0; i < listaBotones.size(); i++){
-            Boton b = listaBotones.get(i);
-            if (b.isSelected()){
-                botonesSeleccionados.add(b);
-            }else{
-                botonesNOSeleccionados.add(b);
-            }
-        }
-    }
-
-    @SuppressLint("ResourceType")
-    public void onComenzar(View view) {
-
-        intentos=0;
-        reiniciar();
-        generarBotonesColoresRandom();
-
-        while (intentos<=10){
-            // limitacion de pulsaciones boones colores y comparamos las listas y y mostramoss aciertos
-            vecesPuladasYComparaListas();
-
-            if (intentos==10 || listaRandomColors.equals(ltAciertos) ){
-                acabarPartida();
-            }
-        }
-    }
-
     private void vecesPuladasYComparaListas() {
         Map<Integer,Integer> contadorCliksBotonesMaps = new HashMap<>(); //almacenamos los contadores de cata boton en esta variable
 
@@ -108,50 +112,73 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     int contadorBoton = contadorCliksBotonesMaps.get(boton.getId());
                     contadorBoton++;
-                    contadorCliksBotonesMaps.put(boton.getId(),contadorBoton); //cantilizamos el contor del mapa
+                    contadorCliksBotonesMaps.put(boton.getId(),contadorBoton); //contabilizamos el contador del mapa
 
-                    //comparamos las listas y y mostramoss tipos de aciertos
-                    cargarInfoListViews();
-                    switch (contadorCliksBotonesMaps.size() <= 4){ //por repasar bien
-                        case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos coinciden
-                            bAdivinar1.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar2.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar3.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar4.setBackgroundColor(getColor(R.color.negro));
-                            break;
-                        case (!ltIntentos.equals(ltAciertos)): //caso absoluto de nunguno coincide
-                            bAdivinar1.setBackgroundColor(getColor(R.color.blanco));
-                            bAdivinar2.setBackgroundColor(getColor(R.color.blanco));
-                            bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
-                            bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
-                            break;
-                        case (): // coincide color pero no la posición
+                    //generamos una lista de botones selecionados
+                    List<Boton> listaBotonesSelect = ltIntentos.findViewById(R.id.lv1);
+                    //comparamos posición y color de ñps botones aleatorios
+                    for ( int i=0; i<listaBotonesSelect.size(); i++ ){
+                        int pos = listaBotonesSelect.get(i).getPosicion();
+                        int color = listaBotonesSelect.get(i).getColor();
 
-                            //coincide en color y posicion
-                            bAdivinar1.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar2.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar3.setBackgroundColor(getColor(R.color.negro));
-                            bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+                        List<Boton> listaBotonesRandom = listaRandomColors;
+                        //generamos lista de botones random
+                        for (int t=0; t<listaBotonesRandom.size(); t++){
+                            int posRnd= listaBotonesRandom.get(t).getPosicion();
+                            int colorRnd= listaBotonesRandom.get(t).getColor();
 
-                            //cohincide en solo color
-                            bAdivinar1.setBackgroundColor(getColor(R.color.gris));
-                            bAdivinar2.setBackgroundColor(getColor(R.color.gris));
-                            bAdivinar3.setBackgroundColor(getColor(R.color.gris));
-                            bAdivinar4.setBackgroundColor(getColor(R.color.gris));
-                            break;
+                            //comparamos las listas y  mostramoss tipos de aciertos
+
+                            int menorIgual4= 1;
+                            int mayor4=2;
+                            switch (contadorCliksBotonesMaps.size()<=4 ? menorIgual4:mayor4){ //por repasar bien
+                                case 1:
+                                    if (pos == posRnd && color == colorRnd) {
+                                        bAdivinar1.setBackgroundColor(getColor(R.color.negro));
+                                        bAdivinar2.setBackgroundColor(getColor(R.color.negro));
+                                        bAdivinar3.setBackgroundColor(getColor(R.color.negro));
+                                        bAdivinar4.setBackgroundColor(getColor(R.color.negro));
+                                        acabarPartida();
+                                    } else if (pos != posRnd && color != colorRnd) { //caso absoluto de nunguno coincide
+                                        bAdivinar1.setBackgroundColor(getColor(R.color.blanco));
+                                        bAdivinar2.setBackgroundColor(getColor(R.color.blanco));
+                                        bAdivinar3.setBackgroundColor(getColor(R.color.blanco));
+                                        bAdivinar4.setBackgroundColor(getColor(R.color.blanco));
+                                    } else if (pos != posRnd && color == colorRnd) { // coincide color pero no la posición
+                                        bAdivinar1.setBackgroundColor(getColor(R.color.gris));
+                                        bAdivinar2.setBackgroundColor(getColor(R.color.gris));
+                                        bAdivinar3.setBackgroundColor(getColor(R.color.gris));
+                                        bAdivinar4.setBackgroundColor(getColor(R.color.gris));
+                                     }
+                                    break;
+                                case 2:
+                                    Toast.makeText(MainActivity.this, "Te has pasado pulsando los botones, solo de hadmiten 4 pulsaciones", Toast.LENGTH_SHORT).show();
+                                    break;
+                            }
+                            cargarInfoListViews();
+                        }
                     }
                 }
             });
         }
     }
-
     private void acabarPartida() {
-        //mostrar las combianación random en los botonesde arriba
+        //mostrar las combinación random en los botonesde arriba
 
-        bAdivinar1.setBackgroundColor(listaRandomColors.get(0));
-        bAdivinar2.setBackgroundColor(listaRandomColors.get(1));
-        bAdivinar3.setBackgroundColor(listaRandomColors.get(2));
-        bAdivinar4.setBackgroundColor(listaRandomColors.get(3));
+        Button[] botonesAdivinar= { bAdivinar1, bAdivinar2, bAdivinar3, bAdivinar4};
+
+        for (int i=0; i<4;i++){
+            int color = listaRandomColors.get(i).getColor();
+            int pos = listaRandomColors.get(i).getPosicion();
+
+            botonesAdivinar[pos].setBackgroundColor(getColor(color));
+        }
+    }
+    private void borrarContenidoListView() {
+        botonesAciertosAdapter.clear();
+        botonesAciertosAdapter.notifyDataSetChanged();
+        botonesElegidosAdapter.clear();
+        botonesElegidosAdapter.notifyDataSetChanged();
     }
     private void reiniciar() {
         bComenzar.setEnabled(true);
@@ -161,22 +188,7 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
 
     }
-    private void asignarBotonesColores() {
-        bComenzar = findViewById(R.id.bComenzar);
-
-        //botones de abajo
-        bAzul = (Button) findViewById(R.id.bAzul);
-        bAmarillo = (Button) findViewById(R.id.bAmarillo);
-        bRojo = (Button) findViewById(R.id.bRojo);
-        bVerde = (Button) findViewById(R.id.bVerde);
-
-        //botones de arriba
-        bAdivinar1 = (Button) findViewById(R.id.bAdivinar1);
-        bAdivinar2 = (Button) findViewById(R.id.bAdivinar2);
-        bAdivinar3 = (Button) findViewById(R.id.bAdivinar2);
-        bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
-    }
-    public void generarBotonesColoresRandom() {
+    public List<Boton> generarBotonesColoresRandom() {
         //List<String> colores = Arrays.asList("rojo","verde","azul","amarillo");
 
         @SuppressLint("ResourceType")
@@ -213,8 +225,6 @@ public class MainActivity extends AppCompatActivity {
             listaRandomColors.add(b);
         }
 
-
-
         /*int num= (int) (Math.random()*4+1);
         Set<Integer> indexColors = getFourRandomColors();
         final int[] colores = {
@@ -228,9 +238,9 @@ public class MainActivity extends AppCompatActivity {
         listaRandomColors.add(colores[num]);
         listaRandomColors.add(colores[num]);
         listaRandomColors.add(colores[num]);*/
-
-
+        return listaRandomColors;
     }
+/*
     private Set<Integer> getFourRandomColors() {
         Set<Integer> set = Collections.emptySet();
         int color;
@@ -241,4 +251,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return  set;
     }
+*/
 }
