@@ -11,6 +11,9 @@ public class Boton {
         this.posicion = posicion;
     }
 
+    public Boton(int posicion, String color) {
+    }
+
     public boolean isSelected() {
         return isSelected;
     }

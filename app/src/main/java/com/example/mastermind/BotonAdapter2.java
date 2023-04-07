@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-public class BotonAdapter extends ArrayAdapter<Boton>  {
+public class BotonAdapter2 extends ArrayAdapter<Boton>  {
     private static class ViewHolder{
         Button b1;
         Button b2;
@@ -20,7 +20,7 @@ public class BotonAdapter extends ArrayAdapter<Boton>  {
         Button b4;
     }
 
-    public BotonAdapter(Context context, List<Boton> botonesSeleccionados) {
+    public BotonAdapter2(Context context, List<Boton> botonesSeleccionados) {
         super(context, 0, botonesSeleccionados);
     }
 
@@ -31,13 +31,15 @@ public class BotonAdapter extends ArrayAdapter<Boton>  {
         ViewHolder vh;
 
         if (convertView == null){
-            vh = new ViewHolder();
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lista_botones_elegida,parent,false);
 
-            vh.b1 = convertView.findViewById(R.id.bElegido1);
-            vh.b2 = convertView.findViewById(R.id.bElegido2);
-            vh.b3 = convertView.findViewById(R.id.bElegido3);
-            vh.b4 = convertView.findViewById(R.id.bElegido4);
+            vh = new ViewHolder();
+
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lista_botones_aciertos,parent,false);
+
+            vh.b1 = convertView.findViewById(R.id.bCiertos1); //esta mal porque tenemos que hacerlo con la posicion de cada boton y lo mismo con el color
+            vh.b2 = convertView.findViewById(R.id.bCiertos2);
+            vh.b3 = convertView.findViewById(R.id.bCiertos3);
+            vh.b4 = convertView.findViewById(R.id.bCiertos4);
 
             convertView.setTag(vh);
         }else {
@@ -45,6 +47,8 @@ public class BotonAdapter extends ArrayAdapter<Boton>  {
         }
 
         //añadimos los colores y posiciones a la lista
+
+        //aqui iria la condicion de los colores negro y grises
 
         vh.b1.setText("b1:"+b.getPosicion() + b.getColor());
         vh.b2.setText("b2:"+b.getPosicion() + b.getColor());

@@ -1,18 +1,14 @@
 package com.example.mastermind;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -22,31 +18,50 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     int intentos;
-    int cliks=0;
-    int cliks_max = 4;
-
-
-
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView ltIntentos, ltAciertos;
-    ArrayList<Integer> listaRandomColors = new ArrayList<>(); //por revisar con gpt
-    //private List<Button> listBotonesIntentos, listBotonesAciertos;
-    //---
+    List<Boton> listaRandomColors = new ArrayList<>();
     private  List<Boton> listaBotones = new ArrayList<>();
-    private  List<Boton> botonesSeleccionados = new ArrayList<>();
-    private  List<Boton> botonesNOSeleccionados = new ArrayList<>();
+    private  List<Boton> botonesSeleccionados , botonesNOSeleccionados ;
+    private BotonAdapter botonesElegidosAdapter;
+    private  BotonAdapter2 botonesAciertosAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //asignamos los botones de colores
         asignarBotonesColores();
+
+        //asignamos las listView
+        asignartListViews();
+
+        //agregamos info a listas
+        cargarInfoListViews();
+
+        //agrega los botones a una lista
+        // agregarAlistasBotones();
+
+    }
+
+    private void cargarInfoListViews() {
+        //iniciamos la lista de botones seleccionados
+
+        botonesSeleccionados = new ArrayList<>();
+
+        //agregamos los elemento a las listas usando sus adaptadores personalizados
+
+        botonesElegidosAdapter = new BotonAdapter( this,botonesSeleccionados);
+        botonesAciertosAdapter = new BotonAdapter2(this, botonesSeleccionados);
+
+        ltIntentos.setAdapter(botonesElegidosAdapter);
+        ltAciertos.setAdapter(botonesAciertosAdapter);
+    }
+
+    private void asignartListViews() {
         ltAciertos = findViewById(R.id.lv2);
         ltIntentos = findViewById(R.id.lv1);
-        agregarAlistasBotones();
-
-
-
     }
 
     private void agregarAlistasBotones() {
@@ -65,10 +80,9 @@ public class MainActivity extends AppCompatActivity {
 
         intentos=0;
         reiniciar();
-        generaraColoresRandom();
+        generarBotonesColoresRandom();
 
         while (intentos<=10){
-
             // limitacion de pulsaciones boones colores y comparamos las listas y y mostramoss aciertos
             vecesPuladasYComparaListas();
 
@@ -97,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     contadorCliksBotonesMaps.put(boton.getId(),contadorBoton); //cantilizamos el contor del mapa
 
                     //comparamos las listas y y mostramoss tipos de aciertos
-
+                    cargarInfoListViews();
                     switch (contadorCliksBotonesMaps.size() <= 4){ //por repasar bien
                         case(ltIntentos.equals(ltAciertos)) : //caso absoluto de todos coinciden
                             bAdivinar1.setBackgroundColor(getColor(R.color.negro));
@@ -162,8 +176,46 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar3 = (Button) findViewById(R.id.bAdivinar2);
         bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
     }
-    public void generaraColoresRandom() {
-        int num= (int) (Math.random()*4+1);
+    public void generarBotonesColoresRandom() {
+        //List<String> colores = Arrays.asList("rojo","verde","azul","amarillo");
+
+        @SuppressLint("ResourceType")
+        TypedArray colores = getResources().obtainTypedArray(R.array.colores);
+
+        List<Integer> posiciones = Arrays.asList(0,1,2,3);
+
+        listaRandomColors = new ArrayList<>();
+
+        Random rnd = new Random();
+
+        for (int i=0;i<=4;i++){
+            /*int colorIndex = rnd.nextInt(colores.size());
+            String color = colores.get(colorIndex);
+            colores.remove(colorIndex);
+
+            int posIndex = rnd.nextInt(posiciones.size());
+            int posicion = posiciones.get(posIndex);
+
+            Boton b = new Boton(posicion,color);
+
+            listaRandomColors.add(b);*/
+
+            int colorIndex = rnd.nextInt(colores.length());
+            int colorResId = colores.getResourceId(colorIndex,0);
+            String color = getResources().getResourceEntryName(colorResId);
+            colores.recycle();
+
+            int posIndex = rnd.nextInt(posiciones.size());
+            int posicion = posiciones.get(posIndex);
+
+            Boton b = new Boton(posicion,color);
+
+            listaRandomColors.add(b);
+        }
+
+
+
+        /*int num= (int) (Math.random()*4+1);
         Set<Integer> indexColors = getFourRandomColors();
         final int[] colores = {
                     R.color.rojo,
@@ -175,12 +227,9 @@ public class MainActivity extends AppCompatActivity {
         listaRandomColors.add(colores[num]);
         listaRandomColors.add(colores[num]);
         listaRandomColors.add(colores[num]);
-        listaRandomColors.add(colores[num]);
+        listaRandomColors.add(colores[num]);*/
 
-      /* bAdivinar1.setBackgroundColor(colores[num]);
-        bAdivinar2.setBackgroundColor(colores[num]);
-        bAdivinar3.setBackgroundColor(colores[num]);
-        bAdivinar4.setBackgroundColor(colores[num]);*/
+
     }
     private Set<Integer> getFourRandomColors() {
         Set<Integer> set = Collections.emptySet();
