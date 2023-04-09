@@ -11,20 +11,18 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     int intentos;
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
-    private ListView ltIntentos, ltAciertos;
+    private ListView lvIntentos, lvAciertos;
     List<Boton> listaRandomColors = new ArrayList<>();
     private  List<Boton> listaBotones = new ArrayList<>();
-    private  List<Boton> botonesSeleccionados , botonesNOSeleccionados ;
+    private  List<Boton> botonesSeleccionados  ;
     private BotonAdapter botonesElegidosAdapter;
     private  BotonAdapter2 botonesAciertosAdapter;
 
@@ -58,49 +56,40 @@ public class MainActivity extends AppCompatActivity {
         //botones de arriba
         bAdivinar1 = (Button) findViewById(R.id.bAdivinar1);
         bAdivinar2 = (Button) findViewById(R.id.bAdivinar2);
-        bAdivinar3 = (Button) findViewById(R.id.bAdivinar2);
+        bAdivinar3 = (Button) findViewById(R.id.bAdivinar3);
         bAdivinar4 = (Button) findViewById(R.id.bAdivinar4);
     }
     private void asignartListViews() {
-        ltAciertos = findViewById(R.id.lv2);
-        ltIntentos = findViewById(R.id.lv1);
+        lvAciertos = findViewById(R.id.lv2);
+        lvIntentos = findViewById(R.id.lv1);
     }
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
         intentos=0;
-       // reiniciar();
-        // borrarContenidoListView();
+       //reiniciar();
+        borrarContenidoListView();
         generarBotonesColoresRandom();
 
-        while (intentos<=10){
-            // limitacion de pulsaciones boones colores y comparamos las listas y y mostramoss aciertos
+        while (intentos<=10 && !listaRandomColors.equals(lvIntentos)){
+            // limpiar la selección de botones de colores
+            botonesSeleccionados.clear();
+
+            Toast.makeText(this,"Has perdido, Intentalo de nuevo",Toast.LENGTH_SHORT).show();
+
+            //espera a que se presione los botones de colores
+           while (botonesSeleccionados.size()<=listaRandomColors.size()){
+
+           }
             vecesPuladasYComparaListas();
             intentos++;
-
-            if (intentos==10 || listaRandomColors.equals(ltAciertos) ){
-                //acabarPartida();
-            }
         }
-    }
-    private void cargarInfoListViews() {
-        //iniciamos la lista de botones seleccionados
-
-        botonesSeleccionados = new ArrayList<>();
-
-        //agregamos los elemento a las listas usando sus adaptadores personalizados
-
-        botonesElegidosAdapter = new BotonAdapter( this,botonesSeleccionados);
-        botonesAciertosAdapter = new BotonAdapter2(this, botonesSeleccionados);
-
-        ltIntentos.setAdapter(botonesElegidosAdapter);
-        ltAciertos.setAdapter(botonesAciertosAdapter);
-
+        if (listaRandomColors.equals(lvIntentos)){
+            Toast.makeText(this,"¡Felicidades!, pulsa de nuevo 'comenza' para iniciar otra partida",Toast.LENGTH_SHORT).show();
+        }
     }
     private void vecesPuladasYComparaListas() {
         Map<Integer,Integer> contadorCliksBotonesMaps = new HashMap<>(); //almacenamos los contadores de cata boton en esta variable
-
         Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
-
         for (final Button boton : botonesColores){
 
             //agregamos contador para cada boton del mapa
@@ -111,15 +100,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     int contadorBoton = contadorCliksBotonesMaps.get(boton.getId());
-                    contadorBoton++;
-                    contadorCliksBotonesMaps.put(boton.getId(),contadorBoton); //contabilizamos el contador del mapa
+
+                    contadorCliksBotonesMaps.put(boton.getId(),contadorBoton+1); //contabilizamos el contador del mapa
 
                     //generamos una lista de botones selecionados
-                    List<Boton> listaBotonesSelect = ltIntentos.findViewById(R.id.lv1);
+                    List<Boton> listaBotonesSelect = (List<Boton>) lvIntentos.getAdapter();
                     //comparamos posición y color de ñps botones aleatorios
                     for ( int i=0; i<listaBotonesSelect.size(); i++ ){
                         int pos = listaBotonesSelect.get(i).getPosicion();
                         int color = listaBotonesSelect.get(i).getColor();
+
 
                         List<Boton> listaBotonesRandom = listaRandomColors;
                         //generamos lista de botones random
@@ -161,6 +151,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    private void cargarInfoListViews() {
+
+        //agregamos los elemento a las listas usando sus adaptadores personalizados
+
+        botonesElegidosAdapter = new BotonAdapter(this, botonesSeleccionados);
+        botonesAciertosAdapter = new BotonAdapter2(this, listaRandomColors);
+
+        lvIntentos.setAdapter(botonesElegidosAdapter);
+        lvAciertos.setAdapter(botonesAciertosAdapter);
+
+
     }
     private void acabarPartida() {
         //mostrar las combinación random en los botonesde arriba
@@ -204,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
             Boton b = new Boton(posicion,color);
             listaRandomColors.add(b);
         }
+        Toast.makeText(this, "RandomColors Generados, adivina la combinación",Toast.LENGTH_SHORT).show();
         colores.recycle();
         return listaRandomColors;
     }

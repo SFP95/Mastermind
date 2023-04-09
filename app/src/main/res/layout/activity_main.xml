@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/bComenzar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/comenzar"
         android:onClick="onComenzar"
+        android:text="@string/comenzar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -169,13 +170,13 @@
         android:layout_width="64dp"
         android:layout_height="462dp"
         android:layout_marginTop="28dp"
+        android:src="@drawable/arrowup"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/arrowup"
         tools:ignore="ContentDescription" />
 
     <ListView
