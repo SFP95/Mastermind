@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         //asignamos las listView
         asignartListViews();
 
-        //agregamos info a listas
-        cargarInfoListViews();
+        /*//agregamos info a listas
+        cargarInfoListViews();*/
 
         //agrega los botones a una lista
         // agregarAlistasBotones();
@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
         intentos=0;
-        reiniciar();
-        borrarContenidoListView();
+       // reiniciar();
+        // borrarContenidoListView();
         generarBotonesColoresRandom();
 
         while (intentos<=10){
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             intentos++;
 
             if (intentos==10 || listaRandomColors.equals(ltAciertos) ){
-                acabarPartida();
+                //acabarPartida();
             }
         }
     }
@@ -186,70 +186,25 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar2.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar3.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
-
+        borrarContenidoListView();
     }
     public List<Boton> generarBotonesColoresRandom() {
-        //List<String> colores = Arrays.asList("rojo","verde","azul","amarillo");
-
-        @SuppressLint("ResourceType")
         TypedArray colores = getResources().obtainTypedArray(R.array.colores);
-
         List<Integer> posiciones = Arrays.asList(0,1,2,3);
-
         listaRandomColors = new ArrayList<>();
-
         Random rnd = new Random();
 
         for (int i=0;i<=4;i++){
-            /*int colorIndex = rnd.nextInt(colores.size());
-            String color = colores.get(colorIndex);
-            colores.remove(colorIndex);
-
-            int posIndex = rnd.nextInt(posiciones.size());
-            int posicion = posiciones.get(posIndex);
-
-            Boton b = new Boton(posicion,color);
-
-            listaRandomColors.add(b);*/
 
             int colorIndex = rnd.nextInt(colores.length());
             int colorResId = colores.getResourceId(colorIndex,0);
             String color = getResources().getResourceEntryName(colorResId);
-            colores.recycle();
-
             int posIndex = rnd.nextInt(posiciones.size());
             int posicion = posiciones.get(posIndex);
-
             Boton b = new Boton(posicion,color);
-
             listaRandomColors.add(b);
         }
-
-        /*int num= (int) (Math.random()*4+1);
-        Set<Integer> indexColors = getFourRandomColors();
-        final int[] colores = {
-                    R.color.rojo,
-                    R.color.azul,
-                    R.color.amarillo,
-                    R.color.verde
-        };
-
-        listaRandomColors.add(colores[num]);
-        listaRandomColors.add(colores[num]);
-        listaRandomColors.add(colores[num]);
-        listaRandomColors.add(colores[num]);*/
+        colores.recycle();
         return listaRandomColors;
     }
-/*
-    private Set<Integer> getFourRandomColors() {
-        Set<Integer> set = Collections.emptySet();
-        int color;
-        Random rnd = new Random();
-        while (set.size()<4){
-            color = rnd.nextInt(4);
-            set.add(color);
-        }
-        return  set;
-    }
-*/
 }
