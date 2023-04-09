@@ -175,7 +175,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/arrowUp"
+        tools:srcCompat="@drawable/arrowup"
         tools:ignore="ContentDescription" />
 
     <ListView
