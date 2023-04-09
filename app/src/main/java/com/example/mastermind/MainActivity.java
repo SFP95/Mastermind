@@ -186,10 +186,10 @@ public class MainActivity extends AppCompatActivity {
     }
     private void reiniciar() {
         bComenzar.setEnabled(true);
-        bAdivinar1.setBackgroundColor(getColor(R.color.purple_500));
-        bAdivinar2.setBackgroundColor(getColor(R.color.purple_500));
-        bAdivinar3.setBackgroundColor(getColor(R.color.purple_500));
-        bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
+        bAdivinar1.setBackgroundColor(getColor(R.color.purple_200));
+        bAdivinar2.setBackgroundColor(getColor(R.color.purple_200));
+        bAdivinar3.setBackgroundColor(getColor(R.color.purple_200));
+        bAdivinar4.setBackgroundColor(getColor(R.color.purple_200));
 
         if (lvAciertos != null && lvIntentos.getAdapter() != null) {
             borrarContenidoListView();
