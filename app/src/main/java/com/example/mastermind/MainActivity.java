@@ -21,10 +21,11 @@ public class MainActivity extends AppCompatActivity {
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
     private ListView lvIntentos, lvAciertos;
     List<Boton> listaRandomColors = new ArrayList<>();
-    private  List<Boton> listaBotones = new ArrayList<>();
+    private  List<Boton> listaIntentos = new ArrayList<>();
     private  List<Boton> botonesSeleccionados  ;
     private BotonAdapter botonesElegidosAdapter;
     private  BotonAdapter2 botonesAciertosAdapter;
+    private Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,22 +67,23 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
         intentos=0;
-       //reiniciar();
-        borrarContenidoListView();
+        botonesSeleccionados = new ArrayList<>();
+        listaIntentos = (List<Boton>) lvIntentos.getAdapter();
         generarBotonesColoresRandom();
+        reiniciar();
 
-        while (intentos<=10 && !listaRandomColors.equals(lvIntentos)){
+
+        while (intentos==10 && !listaRandomColors.equals(listaIntentos)){
             // limpiar la selección de botones de colores
-            botonesSeleccionados.clear();
+           // botonesSeleccionados.clear();
 
             Toast.makeText(this,"Has perdido, Intentalo de nuevo",Toast.LENGTH_SHORT).show();
 
             //espera a que se presione los botones de colores
-           while (botonesSeleccionados.size()<=listaRandomColors.size()){
-
+           while (botonesSeleccionados.size() < listaRandomColors.size()){
+               vecesPuladasYComparaListas();
+               intentos++;
            }
-            vecesPuladasYComparaListas();
-            intentos++;
         }
         if (listaRandomColors.equals(lvIntentos)){
             Toast.makeText(this,"¡Felicidades!, pulsa de nuevo 'comenza' para iniciar otra partida",Toast.LENGTH_SHORT).show();
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void vecesPuladasYComparaListas() {
         Map<Integer,Integer> contadorCliksBotonesMaps = new HashMap<>(); //almacenamos los contadores de cata boton en esta variable
-        Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
+
         for (final Button boton : botonesColores){
 
             //agregamos contador para cada boton del mapa
@@ -121,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
                             int menorIgual4= 1;
                             int mayor4=2;
-                            switch (contadorCliksBotonesMaps.size()<=4 ? menorIgual4:mayor4){ //por repasar bien
+                            switch (contadorCliksBotonesMaps.size()<=botonesColores.length ? menorIgual4:mayor4){ //por repasar bien
                                 case 1:
                                     if (pos == posRnd && color == colorRnd) {
                                         bAdivinar1.setBackgroundColor(getColor(R.color.negro));
@@ -188,16 +190,20 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar2.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar3.setBackgroundColor(getColor(R.color.purple_500));
         bAdivinar4.setBackgroundColor(getColor(R.color.purple_500));
-        borrarContenidoListView();
+
+        if (lvAciertos != null && lvIntentos.getAdapter() != null) {
+            borrarContenidoListView();
+        }
     }
-    public List<Boton> generarBotonesColoresRandom() {
+    public void generarBotonesColoresRandom() {
+        listaRandomColors.clear();
+        Random rnd = new Random();
+        int max = botonesColores.length;
         TypedArray colores = getResources().obtainTypedArray(R.array.colores);
         List<Integer> posiciones = Arrays.asList(0,1,2,3);
-        listaRandomColors = new ArrayList<>();
-        Random rnd = new Random();
+       // listaRandomColors = new ArrayList<>();
 
         for (int i=0;i<=4;i++){
-
             int colorIndex = rnd.nextInt(colores.length());
             int colorResId = colores.getResourceId(colorIndex,0);
             String color = getResources().getResourceEntryName(colorResId);
@@ -208,6 +214,5 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(this, "RandomColors Generados, adivina la combinación",Toast.LENGTH_SHORT).show();
         colores.recycle();
-        return listaRandomColors;
     }
 }
