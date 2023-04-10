@@ -61,18 +61,13 @@ public class MainActivity extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
+        reiniciar();
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
         listaIntentos = (List<Boton>) lvIntentos.getAdapter();
         generarBotonesColoresRandom();
-        reiniciar();
 
 
-        while (intentos<10 && !listaRandomColors.equals(listaIntentos)){
-            // limpiar la selección de botones de colores
-            botonesSeleccionados.clear();
-
-            Toast.makeText(this,"Has perdido, Intentalo de nuevo",Toast.LENGTH_SHORT).show();
 
             //espera a que se presione los botones de colores
 
@@ -93,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-    }
+
     private void vecesPulsadasYComparaListas() {
         List<Boton> listaBotonesSeleccionados = new ArrayList<>(botonesSeleccionados);
 
