@@ -66,27 +66,17 @@ public class MainActivity extends AppCompatActivity {
         botonesSeleccionados = new ArrayList<>();
         listaIntentos = (List<Boton>) lvIntentos.getAdapter();
         generarBotonesColoresRandom();
-
+        vecesPulsadasYComparaListas();
 
 
             //espera a que se presione los botones de colores
 
-            while (botonesSeleccionados.size() < listaRandomColors.size()) {
-                vecesPulsadasYComparaListas();
+            /*while (botonesSeleccionados.size() <= listaRandomColors.size()) {
                 if (botonesSeleccionados.size() == 4) { // Si se han pulsado los 4 botones, comparar listas
+                    vecesPulsadasYComparaListas();
                     intentos++;
-                    if (listaRandomColors.equals(listaIntentos)) { // Si las listas son iguales, el usuario ha ganado
-                        Toast.makeText(this,"¡Felicidades, has ganado!",Toast.LENGTH_SHORT).show();
-                        break;
-                    } else if (intentos == 10) { // Si se han agotado los intentos, el usuario ha perdido
-                        Toast.makeText(this,"Has perdido, intentalo de nuevo",Toast.LENGTH_SHORT).show();
-                        break;
-                    } else { // Si aún hay intentos disponibles, continuar jugando
-                        Toast.makeText(this,"Intento "+ intentos,Toast.LENGTH_SHORT).show();
-                        reiniciar();
-                    }
                 }
-            }
+            }*/
         }
 
     private void vecesPulsadasYComparaListas() {
@@ -99,14 +89,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (botonSeleccionado.getColor() == botonAdivinar.getColor() && botonSeleccionado.getPosicion() == botonAdivinar.getPosicion()) {
                     botonSeleccionado.setColor(R.color.negro);
+                    cargarInfoListViews();
                 } else if (botonSeleccionado.getColor() == botonAdivinar.getColor() && botonSeleccionado.getPosicion() != botonAdivinar.getPosicion()) {
                     botonSeleccionado.setColor(R.color.gris);
+                    cargarInfoListViews();
                 } else {
                     botonSeleccionado.setColor(R.color.blanco);
+                    cargarInfoListViews();
                 }
             }
 
-            cargarInfoListViews();
 
             if (listaBotonesSeleccionados.equals(listaRandomColors)) {
                 Toast.makeText(this, "Has ganado", Toast.LENGTH_SHORT).show();
@@ -137,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
             botonesAdivinar[pos].setBackgroundColor(getColor(color));
         }
+        cargarInfoListViews();
 
     }
     private void borrarContenidoListView() {
