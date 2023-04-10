@@ -2,6 +2,7 @@ package com.example.mastermind;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BotonAdapter2 extends ArrayAdapter<Boton>  {
@@ -18,45 +22,61 @@ public class BotonAdapter2 extends ArrayAdapter<Boton>  {
         Button b2;
         Button b3;
         Button b4;
+        Button botonActual;
+        ArrayList<Button> botones;
     }
-
     public BotonAdapter2(Context context, List<Boton> botonesSeleccionados) {
         super(context, 0, botonesSeleccionados);
     }
 
     @NonNull
     @Override
-    public View getView(int position, View convertView,ViewGroup parent) {
-        Boton b = getItem(position);
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+       // View v;
         ViewHolder vh;
 
         if (convertView == null){
-
             vh = new ViewHolder();
 
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lista_botones_aciertos,parent,false);
 
-            vh.b1 = convertView.findViewById(R.id.bCiertos1); //esta mal porque tenemos que hacerlo con la posicion de cada boton y lo mismo con el color
+            vh.b1 = convertView.findViewById(R.id.bCiertos1);
             vh.b2 = convertView.findViewById(R.id.bCiertos2);
             vh.b3 = convertView.findViewById(R.id.bCiertos3);
             vh.b4 = convertView.findViewById(R.id.bCiertos4);
-
+            vh.botones = new ArrayList<>(Arrays.asList(vh.b1,vh.b2,vh.b3,vh.b4));
             convertView.setTag(vh);
         }else {
             vh = (ViewHolder) convertView.getTag();
         }
+        // Obtener el color y la posición de los botones pulsados desde el MainActivity
+        int color1 = getItem(1).getColor();
+        int color2 = getItem(2).getColor();
+        int color3 = getItem(3).getColor();
+        int color4 = getItem(4).getColor();
+        int pos1 = getItem(1).getPosicion();
+        int pos2 = getItem(2).getPosicion();
+        int pos3 = getItem(3).getPosicion();
+        int pos4 = getItem(4).getPosicion();
 
-        //añadimos los colores y posiciones a la lista
-
-        //aqui iria la condicion de los colores negro y grises
-
-        vh.b1.setText("b1:"+b.getPosicion() + b.getColor());
-        vh.b2.setText("b2:"+b.getPosicion() + b.getColor());
-        vh.b3.setText("b3:"+b.getPosicion() + b.getColor());
-        vh.b4.setText("b4:"+b.getPosicion() + b.getColor());
+        // Asignar los colores correspondientes a los botones en la lista
+        asignarColor(vh.b1,position,color1,pos1);
+        asignarColor(vh.b2,position,color2,pos1);
+        asignarColor(vh.b3,position,color3,pos1);
+        asignarColor(vh.b4,position,color4,pos1);
 
 
         return convertView;
+    }
+
+    private void asignarColor (Button boton, int position, int color, int posicion){
+        int[] colores = getContext().getResources().getIntArray(R.array.colores);
+
+        if (posicion == posicion){
+            boton.setBackgroundColor(colores[color]);
+        }else{
+            boton.setBackgroundColor(Color.WHITE);
+        }
     }
 
 }
