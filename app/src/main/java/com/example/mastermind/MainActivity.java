@@ -20,12 +20,9 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     int intentos;
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
-    private ListView lvIntentos, lvAciertos;
     List<Boton> listaRandomColors = new ArrayList<>();
     private  List<Boton> listaIntentos = new ArrayList<>();
     private  List<Boton> botonesSeleccionados  ;
-    private BotonAdapter botonesElegidosAdapter;
-    private  BotonAdapter2 botonesAciertosAdapter;
     private Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
 
     @Override
@@ -35,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         //asignamos los botones de colores
         asignarBotonesColores();
-
-        //asignamos las listView
-        asignartListViews();
 
     }
     private void asignarBotonesColores() {
@@ -55,18 +49,15 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar3 = findViewById(R.id.bAdivinar3);
         bAdivinar4 = findViewById(R.id.bAdivinar4);
     }
-    private void asignartListViews() {
-        lvAciertos = findViewById(R.id.lv2);
-        lvIntentos = findViewById(R.id.lv1);
-    }
+
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
         reiniciar();
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
-        listaIntentos = (List<Boton>) lvIntentos.getAdapter();
+
         generarBotonesColoresRandom();
-        vecesPulsadasYComparaListas();
+
 
 
             //espera a que se presione los botones de colores
@@ -79,45 +70,6 @@ public class MainActivity extends AppCompatActivity {
             }*/
         }
 
-    private void vecesPulsadasYComparaListas() {
-        List<Boton> listaBotonesSeleccionados = new ArrayList<>(botonesSeleccionados);
-
-        if (listaBotonesSeleccionados.size() == 4) {
-            for (int i = 0; i < listaBotonesSeleccionados.size(); i++) {
-                Boton botonSeleccionado = listaBotonesSeleccionados.get(i);
-                Boton botonAdivinar = listaRandomColors.get(i);
-
-                if (botonSeleccionado.getColor() == botonAdivinar.getColor() && botonSeleccionado.getPosicion() == botonAdivinar.getPosicion()) {
-                    botonSeleccionado.setColor(R.color.negro);
-                    cargarInfoListViews();
-                } else if (botonSeleccionado.getColor() == botonAdivinar.getColor() && botonSeleccionado.getPosicion() != botonAdivinar.getPosicion()) {
-                    botonSeleccionado.setColor(R.color.gris);
-                    cargarInfoListViews();
-                } else {
-                    botonSeleccionado.setColor(R.color.blanco);
-                    cargarInfoListViews();
-                }
-            }
-
-
-            if (listaBotonesSeleccionados.equals(listaRandomColors)) {
-                Toast.makeText(this, "Has ganado", Toast.LENGTH_SHORT).show();
-                acabarPartida();
-            } else if (intentos == 10 ){
-                Toast.makeText(this, "Has perdido, Intentalo de nuevo", Toast.LENGTH_SHORT).show();
-                acabarPartida();
-            }
-        }
-    }
-    private void cargarInfoListViews() {
-        //agregamos los elemento a las listas usando sus adaptadores personalizados
-
-        botonesElegidosAdapter = new BotonAdapter(this, botonesSeleccionados);
-        botonesAciertosAdapter = new BotonAdapter2(this, listaRandomColors);
-
-        lvIntentos.setAdapter(botonesElegidosAdapter);
-        lvAciertos.setAdapter(botonesAciertosAdapter);
-    }
     private void acabarPartida() {
         //mostrar las combinación random en los botonesde arriba
 
@@ -129,14 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
             botonesAdivinar[pos].setBackgroundColor(getColor(color));
         }
-        cargarInfoListViews();
-
-    }
-    private void borrarContenidoListView() {
-        botonesAciertosAdapter.clear();
-        botonesAciertosAdapter.notifyDataSetChanged();
-        botonesElegidosAdapter.clear();
-        botonesElegidosAdapter.notifyDataSetChanged();
     }
     private void reiniciar() {
         bComenzar.setEnabled(true);
@@ -145,9 +89,7 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar3.setBackgroundColor(getColor(R.color.purple_200));
         bAdivinar4.setBackgroundColor(getColor(R.color.purple_200));
 
-        if (lvAciertos != null && lvIntentos.getAdapter() != null) {
-            borrarContenidoListView();
-        }
+        //reiniciar botones intentos
     }
     public void generarBotonesColoresRandom() {
         listaRandomColors.clear();
