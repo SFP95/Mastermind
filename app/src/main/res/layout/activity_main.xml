@@ -572,6 +572,330 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="228dp" />
 
+    <Button
+        android:id="@+id/bAcL9_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL9_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL9_1"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL9_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL9_2"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL9_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL9_3"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL8_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL8_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL8_1"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL8_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL8_2"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL8_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL8_3"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL7_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL7_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL7_1"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL7_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL7_2"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL7_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL7_3"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL6_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL6_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL6_1"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL6_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL6_2"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL6_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL6_3"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL5_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL5_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL5_1"
+        app:layout_constraintTop_toBottomOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL5_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL5_2"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL5_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL5_3"
+        app:layout_constraintTop_toBottomOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL4_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL4_1"
+        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL4_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL4_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL4_3"
+        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL4_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL4_2"
+        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL3_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL3_1"
+        app:layout_constraintTop_toTopOf="@+id/gL3Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL3_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL3_3"
+        app:layout_constraintTop_toTopOf="@+id/gL3Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL3_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL3Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL3_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL3_2"
+        app:layout_constraintTop_toTopOf="@+id/gL3Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL2_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL2_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL2_2"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL2_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL2_3"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL2_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL2_1"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL1_1"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/gL1Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL1_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL1_2"
+        app:layout_constraintTop_toTopOf="@+id/gL1Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL1_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL1_3"
+        app:layout_constraintTop_toTopOf="@+id/gL1Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL1_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL1_1"
+        app:layout_constraintTop_toTopOf="@+id/gL1Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL5Top"
         android:layout_width="wrap_content"
@@ -601,13 +925,52 @@
         app:layout_constraintGuide_begin="360dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bAcL10_4"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL10_3"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL10_2"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL10_1"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL10_1"
         android:layout_width="18dp"
         android:layout_height="28dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
         tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bAcL10_3"
+        android:layout_width="18dp"
+        android:layout_height="28dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/bAcL10_2"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+
+    <ImageView
+        android:id="@+id/arrow_image"
+        android:layout_width="47dp"
+        android:layout_height="351dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
