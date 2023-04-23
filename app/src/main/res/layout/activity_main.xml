@@ -489,7 +489,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:layout_constraintVertical_bias="0.518"
-        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bAdivinar2"
@@ -501,7 +502,8 @@
         app:layout_constraintEnd_toStartOf="@+id/bAdivinar3"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:layout_constraintVertical_bias="0.518"
-        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bAdivinar3"
@@ -512,7 +514,8 @@
         app:layout_constraintBottom_toTopOf="@+id/gL10Top"
         app:layout_constraintEnd_toStartOf="@+id/bAdivinar4"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
-        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bAdivinar4"
@@ -523,6 +526,7 @@
         app:layout_constraintBottom_toTopOf="@+id/gL10Top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:visibility="invisible"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Guideline

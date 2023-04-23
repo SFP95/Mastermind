@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -98,42 +99,59 @@ public class MainActivity extends AppCompatActivity {
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
 
+        //generamos la combinación de colores random
         generarBotonesColoresRandom();
 
+        //creamos el generador de turnos has 10
+        while (intentos<=10){
+            intentos++;
+            //metemos los intentos y las comparaciones por lineas
+
+            if (intentos==10){
+                acabarPartida();
+                Toast.makeText(this,"GANASTE!",Toast.LENGTH_SHORT).show();
+            }
+        }
 
 
-            //espera a que se presione los botones de colores
-
-            /*while (botonesSeleccionados.size() <= listaRandomColors.size()) {
-                if (botonesSeleccionados.size() == 4) { // Si se han pulsado los 4 botones, comparar listas
-                    vecesPulsadasYComparaListas();
-                    intentos++;
-                }
-            }*/
         }
     private void acabarPartida() {
         //mostrar las combinación random en los botonesde arriba
 
-        Button[] botonesAdivinar= { bAdivinar1, bAdivinar2, bAdivinar3, bAdivinar4};
+            bAdivinar1.setActivated(true);
+            bAdivinar2.setActivated(true);
+            bAdivinar3.setActivated(true);
+            bAdivinar4.setActivated(true);
 
+        /*Button[] botonesAdivinar= { bAdivinar1, bAdivinar2, bAdivinar3, bAdivinar4};
+        botonesAdivinar.
         for (int i=0; i<4;i++){
             int color = listaRandomColors.get(i).getColor();
             int pos = listaRandomColors.get(i).getPosicion();
 
             botonesAdivinar[pos].setBackgroundColor(getColor(color));
-        }
+        }*/
     }
     private void reiniciar() {
         bComenzar.setEnabled(true);
-        bAdivinar1.setBackgroundColor(getColor(R.color.purple_200));
-        bAdivinar2.setBackgroundColor(getColor(R.color.purple_200));
-        bAdivinar3.setBackgroundColor(getColor(R.color.purple_200));
-        bAdivinar4.setBackgroundColor(getColor(R.color.purple_200));
+        bAdivinar1.setActivated(false);
+        bAdivinar2.setActivated(false);
+        bAdivinar3.setActivated(false);
+        bAdivinar4.setActivated(false);
 
         //reiniciar botones intentos
+
     }
     public void generarBotonesColoresRandom() {
-        listaRandomColors.clear();
+
+        int[] colores = {Color.RED,Color.YELLOW,Color.GREEN,Color.BLUE};
+        Random rnd= new Random();
+
+        bAdivinar1.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
+        bAdivinar2.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
+        bAdivinar3.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
+        bAdivinar4.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
+       /* listaRandomColors.clear();
         Random rnd = new Random();
         int max = botonesColores.length;
         TypedArray colores = getResources().obtainTypedArray(R.array.colores);
@@ -148,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
             int posicion = posiciones.get(posIndex);
             Boton b = new Boton(posicion,color);
             listaRandomColors.add(b);
-        }
+        }*/
         Toast.makeText(this, "RandomColors Generados, adivina la combinación",Toast.LENGTH_SHORT).show();
-        colores.recycle();
+       // colores.recycle();
     }
 }
