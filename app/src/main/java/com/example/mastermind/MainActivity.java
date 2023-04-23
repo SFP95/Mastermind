@@ -32,8 +32,50 @@ public class MainActivity extends AppCompatActivity {
 
         //asignamos los botones de colores
         asignarBotonesColores();
-
+        //asgnamos los botones de intentos
+        asignarBotonesintentos();
+        //asgnamos los botones de aciertos
+        asignarBotonesAciertos();
     }
+
+    private void asignarBotonesAciertos() {
+        String botonID;
+        Button b ;
+
+        for (int i=0; i<10;i++){
+            for (int j=0; j<4; j++) {
+                botonID = "bAcL" + i + "_" + j;
+                int resId = getResources().getIdentifier(botonID, "id", getPackageName());
+                /*b.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                }
+            );*/
+            }
+        }
+    }
+
+    private void asignarBotonesintentos() {
+        String botonID;
+        Button b ;
+
+        for (int i=0; i<10;i++){
+            for (int j=0; j<4; j++) {
+                botonID = "bL" + i + "_" + j;
+                int resId = getResources().getIdentifier(botonID, "id", getPackageName());
+                /*b.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                }
+            );*/
+            }
+        }
+    }
+
     private void asignarBotonesColores() {
         bComenzar = findViewById(R.id.bComenzar);
 
