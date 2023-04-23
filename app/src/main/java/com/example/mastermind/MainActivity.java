@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }*/
         }
-
     private void acabarPartida() {
         //mostrar las combinación random en los botonesde arriba
 

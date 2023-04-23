@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".MainActivity"
-    tools:ignore="DuplicateIds">
+    tools:ignore="DuplicateIds"
+    tools:visibility="visible">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL1Top"
@@ -23,7 +24,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL1_3"
         app:layout_constraintTop_toTopOf="@+id/gL1Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck,DuplicateSpeakableTextCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck,DuplicateSpeakableTextCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL1_3"
@@ -32,7 +34,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL1_2"
         app:layout_constraintTop_toTopOf="@+id/gL1Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL1_2"
@@ -41,7 +44,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL1_1"
         app:layout_constraintTop_toTopOf="@+id/gL1Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL1_1"
@@ -50,7 +54,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL1Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL2_4"
@@ -59,7 +64,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL2_3"
         app:layout_constraintTop_toTopOf="@+id/gL2Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL3_30"
@@ -68,7 +74,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL2_1"
         app:layout_constraintTop_toTopOf="@+id/gL3Top"
-        tools:ignore="HardcodedText,DuplicateClickableBoundsCheck,TouchTargetSizeCheck,TextSizeCheck,VisualLintOverlap" />
+        tools:ignore="HardcodedText,DuplicateClickableBoundsCheck,TouchTargetSizeCheck,TextSizeCheck,VisualLintOverlap"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL2_1"
@@ -77,7 +84,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL2Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL2_2"
@@ -86,7 +94,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL2_1"
         app:layout_constraintTop_toTopOf="@+id/gL2Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL2_3"
@@ -95,7 +104,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL2_2"
         app:layout_constraintTop_toTopOf="@+id/gL2Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL10_3"
@@ -104,7 +114,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL10_2"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL10_4"
@@ -113,7 +124,8 @@
         android:text="Button"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
         tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:layout_editor_absoluteX="160dp" />
+        tools:layout_editor_absoluteX="160dp"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL10_1"
@@ -122,7 +134,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL10_2"
@@ -131,7 +144,8 @@
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/gL9Top"
         tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:layout_editor_absoluteX="96dp" />
+        tools:layout_editor_absoluteX="96dp"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL9_3"
@@ -140,7 +154,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL9_2"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL9_4"
@@ -149,7 +164,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL9_3"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL9_1"
@@ -158,7 +174,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL9_2"
@@ -167,7 +184,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL9_1"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL8_3"
@@ -176,7 +194,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL8_2"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL8_4"
@@ -185,7 +204,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL8_3"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL8_1"
@@ -194,7 +214,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL8_2"
@@ -203,7 +224,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL8_1"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL7_3"
@@ -212,7 +234,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL7_2"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL7_4"
@@ -221,7 +244,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL7_3"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL7_1"
@@ -230,7 +254,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL7_2"
@@ -239,7 +264,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL7_1"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL6_4"
@@ -248,7 +274,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_3"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL6_1"
@@ -257,7 +284,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL6_3"
@@ -266,7 +294,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_2"
         app:layout_constraintTop_toBottomOf="@+id/bL7_3"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL6_2"
@@ -275,7 +304,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_1"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL5_4"
@@ -284,7 +314,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL5_3"
         app:layout_constraintTop_toTopOf="@+id/gL5Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL5_2"
@@ -293,7 +324,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL5_1"
         app:layout_constraintTop_toTopOf="@+id/gL5Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL5_3"
@@ -302,7 +334,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL5_2"
         app:layout_constraintTop_toTopOf="@+id/gL5Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL5_1"
@@ -311,7 +344,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/bL6_1"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL4_3"
@@ -320,7 +354,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_2"
         app:layout_constraintTop_toTopOf="@+id/gL4Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL4_4"
@@ -329,7 +364,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_3"
         app:layout_constraintTop_toTopOf="@+id/gL4Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL4_2"
@@ -338,7 +374,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_1"
         app:layout_constraintTop_toBottomOf="@+id/bL5_2"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL4_1"
@@ -347,7 +384,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL4Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bComenzar"
@@ -508,7 +546,8 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL3Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL3_3"
@@ -517,7 +556,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL3_2"
         app:layout_constraintTop_toTopOf="@+id/gL3Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL3_2"
@@ -526,7 +566,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL2_1"
         app:layout_constraintTop_toTopOf="@+id/gL3Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/bL3_4"
@@ -535,7 +576,8 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL3_3"
         app:layout_constraintTop_toBottomOf="@+id/bL4_4"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL10Top"
@@ -970,7 +1012,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gL10Top" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
