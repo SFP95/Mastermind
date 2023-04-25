@@ -47,13 +47,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j=0; j<4; j++) {
                 botonID = "bAcL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
-                /*b.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                }
-            );*/
+                b = findViewById(resId);
             }
         }
     }
@@ -66,13 +60,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j=0; j<4; j++) {
                 botonID = "bL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
-                /*b.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                    }
-                }
-            );*/
+                b = findViewById(resId);
             }
         }
     }
@@ -133,13 +121,43 @@ public class MainActivity extends AppCompatActivity {
         }*/
     }
     private void reiniciar() {
+        String botonID;
+        Button b ;
+
+        //activar boton comenzar
         bComenzar.setEnabled(true);
-        bAdivinar1.setActivated(false);
-        bAdivinar2.setActivated(false);
-        bAdivinar3.setActivated(false);
-        bAdivinar4.setActivated(false);
+
+        //renicniar los botones de adivinacion
+
+        for (int i=0; i<=4;i++){
+            botonID="bAdivinar"+i;
+            int AdId= getResources().getIdentifier(botonID, "id", getPackageName());
+            b= findViewById(AdId);
+            b.setActivated(false);
+        }
 
         //reiniciar botones intentos
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j <=4; j++) {
+                botonID = "bL" + i + "_" + j;
+                int resId = getResources().getIdentifier(botonID, "id", getPackageName());
+                b = findViewById(resId);
+                b.setActivated(false);
+            }
+        }
+
+        //reiniciar botones aciertos
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 4; j++) {
+                botonID = "bAcL" + i + "_" + j;
+                int resId = getResources().getIdentifier(botonID, "id", getPackageName());
+                b = findViewById(resId);
+                b.setActivated(false);
+            }
+        }
+
 
     }
     public void generarBotonesColoresRandom() {
@@ -151,23 +169,8 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar2.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
         bAdivinar3.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
         bAdivinar4.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
-       /* listaRandomColors.clear();
-        Random rnd = new Random();
-        int max = botonesColores.length;
-        TypedArray colores = getResources().obtainTypedArray(R.array.colores);
-        List<Integer> posiciones = Arrays.asList(0,1,2,3);
-       // listaRandomColors = new ArrayList<>();
 
-        for (int i=0;i<=4;i++){
-            int colorIndex = rnd.nextInt(colores.length());
-            int colorResId = colores.getResourceId(colorIndex,0);
-            String color = getResources().getResourceEntryName(colorResId);
-            int posIndex = rnd.nextInt(posiciones.size());
-            int posicion = posiciones.get(posIndex);
-            Boton b = new Boton(posicion,color);
-            listaRandomColors.add(b);
-        }*/
         Toast.makeText(this, "RandomColors Generados, adivina la combinación",Toast.LENGTH_SHORT).show();
-       // colores.recycle();
+
     }
 }
