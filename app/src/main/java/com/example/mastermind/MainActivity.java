@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-        reiniciar();  //si lo activo al pulsar se cirra la app
+        reiniciar();
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
 
