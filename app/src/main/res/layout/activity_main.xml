@@ -545,7 +545,7 @@
         app:layout_constraintGuide_begin="285dp" />
 
     <Button
-        android:id="@+id/bL2_1"
+        android:id="@+id/bL3_1"
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
@@ -569,7 +569,7 @@
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL2_1"
+        app:layout_constraintStart_toEndOf="@+id/bL3_1"
         app:layout_constraintTop_toTopOf="@+id/gL3Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
