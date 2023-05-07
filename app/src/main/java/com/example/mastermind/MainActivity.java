@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-        //reiniciar();  si lo activo al pulsar se cirra la app
+        reiniciar();  //si lo activo al pulsar se cirra la app
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
 
@@ -127,18 +127,21 @@ public class MainActivity extends AppCompatActivity {
             botonID="bAdivinar"+i;
             int AdId= getResources().getIdentifier(botonID, "id", getPackageName());
             b= findViewById(AdId);
-            b.setActivated(false);
+            if (b != null) {
+                b.setVisibility(View.INVISIBLE);
+            }
         }
 
         //reiniciar botones intentos
 
         for (int i = 0; i < 10; i++) {
-            for (int j = 0; j <=4; j++) {
+            for (int j = 0; j < 4; j++) {
                 botonID = "bL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
                 b = findViewById(resId);
-                b.setActivated(false);
-                b.setVisibility(View.INVISIBLE);
+                if (b != null) {
+                    b.setVisibility(View.INVISIBLE);
+                }
             }
         }
 
@@ -149,8 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 botonID = "bAcL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
                 b = findViewById(resId);
-                b.setActivated(false);
-                b.setVisibility(View.INVISIBLE);
+                if (b != null) {
+                    b.setVisibility(View.INVISIBLE);
+                }
             }
         }
 
