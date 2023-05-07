@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="392dp" />
+        app:layout_constraintGuide_begin="475dp" />
 
     <Button
         android:id="@+id/bL1_4"
@@ -108,6 +108,27 @@
         tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/bL10_4"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL10_3"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+
+        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL10_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL10_1"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
         android:id="@+id/bL10_3"
         android:layout_width="32dp"
         android:layout_height="33dp"
@@ -118,16 +139,6 @@
         tools:visibility="invisible" />
 
     <Button
-        android:id="@+id/bL10_4"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:layout_editor_absoluteX="160dp"
-        tools:visibility="invisible" />
-
-    <Button
         android:id="@+id/bL10_1"
         android:layout_width="32dp"
         android:layout_height="33dp"
@@ -135,16 +146,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL10_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:layout_editor_absoluteX="96dp"
         tools:visibility="invisible" />
 
     <Button
@@ -293,7 +294,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_2"
-        app:layout_constraintTop_toBottomOf="@+id/bL7_3"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -343,7 +344,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/bL6_1"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -373,7 +374,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_1"
-        app:layout_constraintTop_toBottomOf="@+id/bL5_2"
+        app:layout_constraintTop_toTopOf="@+id/gL4Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -405,14 +406,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="573dp" />
+        app:layout_constraintGuide_begin="625dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="444dp" />
+        app:layout_constraintGuide_begin="519dp" />
 
     <Button
         android:id="@+id/bAzul"
@@ -579,7 +580,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL3_3"
-        app:layout_constraintTop_toBottomOf="@+id/bL4_4"
+        app:layout_constraintTop_toTopOf="@+id/gL3Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -588,35 +589,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="95dp" />
+        app:layout_constraintGuide_begin="104dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL9Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="128dp" />
+        app:layout_constraintGuide_begin="140dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL8Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="162dp" />
+        app:layout_constraintGuide_begin="179dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL7Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="195dp" />
+        app:layout_constraintGuide_begin="223dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL6Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="228dp" />
+        app:layout_constraintGuide_begin="264dp" />
 
     <Button
         android:id="@+id/bAcL9_1"
@@ -947,28 +948,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="261dp" />
+        app:layout_constraintGuide_begin="306dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL4Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="294dp" />
+        app:layout_constraintGuide_begin="348dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL3Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="327dp" />
+        app:layout_constraintGuide_begin="391dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL2Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="360dp" />
+        app:layout_constraintGuide_begin="431dp" />
 
     <Button
         android:id="@+id/bAcL10_4"

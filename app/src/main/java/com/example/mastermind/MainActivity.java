@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //asignamos los botones de colores
         asignarBotonesColores();
         //asgnamos los botones de intentos
@@ -83,12 +84,12 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-        reiniciar();
+        //reiniciar();  si lo activo al pulsar se cirra la app
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
 
         //generamos la combinación de colores random
-        generarBotonesColoresRandom();
+        generarBotonesColoresRandom(); //esto funciona bien, pero se muestra arriba y acaba la partida
 
         //creamos el generador de turnos has 10
         while (intentos<=10){
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         Button b ;
 
         //activar boton comenzar
-        bComenzar.setEnabled(true);
+        //bComenzar.setEnabled(true);
 
         //renicniar los botones de adivinacion
 
@@ -144,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
                 b = findViewById(resId);
                 b.setActivated(false);
+                b.setVisibility(View.INVISIBLE);
             }
         }
 
@@ -155,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
                 b = findViewById(resId);
                 b.setActivated(false);
+                b.setVisibility(View.INVISIBLE);
             }
         }
 
