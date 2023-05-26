@@ -11,154 +11,14 @@
     tools:visibility="visible">
 
     <Button
-        android:id="@+id/bL10_4"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL10_3"
-        app:layout_constraintTop_toTopOf="@+id/gL10Top"
-
-        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL10_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL10_1"
-        app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL10_3"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL10_2"
-        app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL10_1"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL10Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL9_3"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL9_2"
-        app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL9_4"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL9_3"
-        app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL9_1"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL9_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL9_1"
-        app:layout_constraintTop_toTopOf="@+id/gL9Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL8_3"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL8_2"
-        app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL8_4"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL8_3"
-        app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL8_1"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL8_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL8_1"
-        app:layout_constraintTop_toTopOf="@+id/gL8Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL7_3"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL7_2"
-        app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
         android:id="@+id/bL7_4"
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL7_3"
-        app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
 
-    <Button
-        android:id="@+id/bL7_1"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL7Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
     <Button
@@ -167,7 +27,37 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL7_1"
-        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL7_3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL7_2"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL7_1"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintTop_toTopOf="@+id/gL10Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL6_3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL6_2"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -177,7 +67,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_3"
-        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -186,19 +76,9 @@
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL6_3"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL6_2"
-        app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
         tools:visibility="invisible" />
 
     <Button
@@ -207,27 +87,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL6_1"
-        app:layout_constraintTop_toTopOf="@+id/gL6Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL5_4"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL5_3"
-        app:layout_constraintTop_toTopOf="@+id/gL5Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL5_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL5_1"
-        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        app:layout_constraintTop_toTopOf="@+id/gL9Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -237,7 +97,17 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL5_2"
-        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL5_4"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL5_3"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -246,8 +116,18 @@
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL5_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL5_1"
+        app:layout_constraintTop_toTopOf="@+id/gL8Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -257,7 +137,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_2"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -267,17 +147,7 @@
         android:layout_height="33dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/bL4_3"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/bL4_2"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@+id/bL4_1"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
@@ -286,23 +156,151 @@
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL4_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL4_1"
+        app:layout_constraintTop_toTopOf="@+id/gL7Top"
         tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
         tools:visibility="invisible" />
 
     <Button
+        android:id="@+id/bL3_4"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL3_3"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL3_1"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL3_3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL3_2"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL3_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL3_1"
+        app:layout_constraintTop_toTopOf="@+id/gL6Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL2_4"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL2_3"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL2_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL2_1"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL2_3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL2_2"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL2_1"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintTop_toTopOf="@+id/gL5Top"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL1_3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL1_2"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL1_4"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL1_3"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL1_2"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/bL1_1"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck,TextSizeCheck"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bL1_1"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:text="Button"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="431dp"
+        tools:visibility="invisible" />
+
+    <Button
         android:id="@+id/bComenzar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
         android:onClick="onComenzar"
         android:text="@string/comenzar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="@+id/guideline8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -315,47 +313,48 @@
         android:id="@+id/bAzul"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="16dp"
         android:backgroundTint="#3F51B5"
         android:text=" "
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/bAmarillo"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="36dp"
-        android:backgroundTint="#FFEB3B"
-        android:text=" "
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/bAzul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bAmarillo"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/bRojo"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="32dp"
         android:backgroundTint="#C30404"
         android:text=" "
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/bVerde"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/bVerde"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="8dp"
         android:backgroundTint="#4CAF50"
         android:text=" "
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/bAmarillo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bRojo"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/bAmarillo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#FFEB3B"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bVerde"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -419,13 +418,6 @@
         tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="64dp" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -469,8 +461,8 @@
 
     <Button
         android:id="@+id/bAcL9_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
@@ -478,8 +470,8 @@
 
     <Button
         android:id="@+id/bAcL9_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL9_1"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
@@ -487,8 +479,8 @@
 
     <Button
         android:id="@+id/bAcL9_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL9_2"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
@@ -496,8 +488,8 @@
 
     <Button
         android:id="@+id/bAcL9_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL9_3"
         app:layout_constraintTop_toTopOf="@+id/gL9Top"
@@ -505,8 +497,8 @@
 
     <Button
         android:id="@+id/bAcL8_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
@@ -514,8 +506,8 @@
 
     <Button
         android:id="@+id/bAcL8_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL8_1"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
@@ -523,8 +515,8 @@
 
     <Button
         android:id="@+id/bAcL8_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL8_2"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
@@ -532,8 +524,8 @@
 
     <Button
         android:id="@+id/bAcL8_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL8_3"
         app:layout_constraintTop_toTopOf="@+id/gL8Top"
@@ -541,8 +533,8 @@
 
     <Button
         android:id="@+id/bAcL7_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
@@ -550,8 +542,8 @@
 
     <Button
         android:id="@+id/bAcL7_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL7_1"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
@@ -559,8 +551,8 @@
 
     <Button
         android:id="@+id/bAcL7_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL7_2"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
@@ -568,8 +560,8 @@
 
     <Button
         android:id="@+id/bAcL7_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL7_3"
         app:layout_constraintTop_toTopOf="@+id/gL7Top"
@@ -577,8 +569,8 @@
 
     <Button
         android:id="@+id/bAcL6_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
@@ -586,8 +578,8 @@
 
     <Button
         android:id="@+id/bAcL6_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL6_1"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
@@ -595,8 +587,8 @@
 
     <Button
         android:id="@+id/bAcL6_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL6_2"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
@@ -604,8 +596,8 @@
 
     <Button
         android:id="@+id/bAcL6_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL6_3"
         app:layout_constraintTop_toTopOf="@+id/gL6Top"
@@ -613,8 +605,8 @@
 
     <Button
         android:id="@+id/bAcL5_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/gL5Top"
@@ -622,8 +614,8 @@
 
     <Button
         android:id="@+id/bAcL5_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL5_1"
         app:layout_constraintTop_toBottomOf="@+id/gL5Top"
@@ -631,8 +623,8 @@
 
     <Button
         android:id="@+id/bAcL5_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL5_2"
         app:layout_constraintTop_toTopOf="@+id/gL5Top"
@@ -640,8 +632,8 @@
 
     <Button
         android:id="@+id/bAcL5_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL5_3"
         app:layout_constraintTop_toBottomOf="@+id/gL5Top"
@@ -649,38 +641,38 @@
 
     <Button
         android:id="@+id/bAcL4_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL4_1"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
         tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/bAcL4_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
         tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/bAcL4_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL4_3"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
         tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/bAcL4_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL4_2"
-        app:layout_constraintTop_toTopOf="@+id/gL4Top"
+        app:layout_constraintTop_toTopOf="@+id/gL2Top"
         tools:ignore="HardcodedText,MissingConstraints,SpeakableTextPresentCheck,TextSizeCheck,TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -691,23 +683,16 @@
         app:layout_constraintGuide_begin="306dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gL4Top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="348dp" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gL2Top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="431dp" />
+        app:layout_constraintGuide_begin="532dp" />
 
     <Button
         android:id="@+id/bAcL10_4"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL10_3"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
@@ -715,8 +700,8 @@
 
     <Button
         android:id="@+id/bAcL10_2"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL10_1"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
@@ -724,8 +709,8 @@
 
     <Button
         android:id="@+id/bAcL10_1"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
@@ -733,8 +718,8 @@
 
     <Button
         android:id="@+id/bAcL10_3"
-        android:layout_width="18dp"
-        android:layout_height="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text=""
         app:layout_constraintStart_toEndOf="@+id/bAcL10_2"
         app:layout_constraintTop_toTopOf="@+id/gL10Top"
