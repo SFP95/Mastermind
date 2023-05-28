@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         String botonID;
         Button b ;
 
-        for (int i=0; i<=10;i++){
+        for (int i=0; i<=7;i++){
             for (int j=0; j<=4; j++) {
                 botonID = "bAcL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         String botonID;
         Button b ;
 
-        for (int i=0; i<=10;i++){
+        for (int i=0; i<=7;i++){
             for (int j=0; j<=4; j++) {
                 botonID = "bL" + i + "_" + j;
                 int resId = getResources().getIdentifier(botonID, "id", getPackageName());
