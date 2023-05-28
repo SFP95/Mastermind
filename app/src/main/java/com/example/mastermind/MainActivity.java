@@ -14,11 +14,12 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     int intentos;
     private Button bComenzar,bVerde,bRojo,bAzul,bAmarillo,bAdivinar1,bAdivinar2,bAdivinar3,bAdivinar4;
-    List<Boton> listaRandomColors = new ArrayList<>();
-    private  List<Boton> listaIntentos = new ArrayList<>();
     private  List<Boton> botonesSeleccionados  ;
-    private Button[] botonesColores ={bRojo,bAmarillo,bAzul,bVerde};
-
+    private Combinacion _partidaActual;
+    private Combinacion _Master;
+    private final int max_filas=7;
+    private int _fila;
+    private int _columna;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +28,16 @@ public class MainActivity extends AppCompatActivity {
 
         //asignamos los botones de colores
         asignarBotonesColores();
+        //asgnamos los botones de Resultado rnd Colores
+        asinarBotonesResultado();
         //asgnamos los botones de intentos
         asignarBotonesintentos();
-        //asgnamos los botones de aciertos
-        asignarBotonesAciertos();
+        //asgnamos los botones de turnos
+        asignarBotonesTurnos();
+
     }
 
-    private void asignarBotonesAciertos() {
+    private void asignarBotonesTurnos() {
         String botonID;
         Button b ;
 
@@ -68,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         bRojo = findViewById(R.id.bRojo);
         bVerde = findViewById(R.id.bVerde);
 
+
+    }
+
+    private  void asinarBotonesResultado(){
         //botones de arriba
         bAdivinar1 = findViewById(R.id.bAdivinar1);
         bAdivinar2 = findViewById(R.id.bAdivinar2);
@@ -97,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-    private void acabarPartida() {
+    private void acabarPartida(boolean ganador) {
         //mostrar las combinación random en los botonesde arriba
 
             bAdivinar1.setActivated(true);
@@ -171,6 +179,59 @@ public class MainActivity extends AppCompatActivity {
         bAdivinar4.setBackgroundColor(colores[rnd.nextInt(colores.length)]);
 
         Toast.makeText(this, "RandomColors Generados, adivina la combinación",Toast.LENGTH_SHORT).show();
+
+    }
+
+
+    public void OnAmarillo(View view) {
+        pulsado("amarillo");
+    }
+
+    public void OnVerde(View view) {
+        pulsado("verde");
+    }
+
+    public void OnRojo(View view) {
+        pulsado("rojo");
+    }
+
+    public void OnAzul(View view) {
+        pulsado("azul");
+    }
+
+    private void pulsado(String color) {
+        boolean terminarPartida = false;
+        boolean ganador = false;
+        revelarColor(color);
+
+        _partidaActual.addColor(color,_columna);
+        _columna = (_columna+1)%4;
+        if (_columna==0){
+            mostrarBlancoNegro();
+            if (_fila < max_filas){
+                if (_Master.getNegros(_partidaActual)==4){
+                    terminarPartida = true;
+                    _fila--;
+                }else {
+                    _partidaActual = new Combinacion();
+                    _fila++;
+                }
+            }else {
+                terminarPartida=true;
+            }
+        }
+        if (acabarPartida(ganador);
+        }
+    }
+
+    private void mostrarBlancoNegro() {
+        int pos = 1;
+
+        for (int i=0;i<_Master.getNegros)
+
+    }
+
+    private void revelarColor(String color) {
 
     }
 }
