@@ -50,4 +50,31 @@ public class Combinacion {
         }
         return  col;
     }
+    public Color[] get_combinacion() {
+        return _combinacion;
+    }
+    public Map<Color, Integer> get_frecuencia() {
+        return _frecuencia;
+    }
+    public void set_combinacion(Color[] _combinacion) {
+        this._combinacion = _combinacion;
+    }
+    public void set_frecuencia(Map<Color, Integer> _frecuencia) {
+        this._frecuencia = _frecuencia;
+    }
+    private int getNumBlacnos(Combinacion blancosCombinacion ){
+        int numBlancos = 0;
+        for (Color color: Color.values()){
+            int miFrecuencia = _frecuencia.get(color);
+            int suFrecuencia = blancosCombinacion.get_frecuencia().get(color);
+
+            if (miFrecuencia >= suFrecuencia){
+                numBlancos += suFrecuencia;
+            }
+            if (miFrecuencia < suFrecuencia){
+                numBlancos += suFrecuencia;
+            }
+        }
+        return  numBlancos;
+    }
 }
