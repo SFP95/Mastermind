@@ -1,5 +1,7 @@
 package com.example.mastermind;
 
+import static androidx.core.graphics.ColorKt.toColorInt;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -98,14 +100,14 @@ public class MainActivity extends AppCompatActivity {
             //metemos los intentos y las comparaciones por lineas
 
             if (intentos==10){
-                acabarPartida();
+                acabarPartida(true);
                 Toast.makeText(this,"GANASTE!",Toast.LENGTH_SHORT).show();
             }
         }
 
 
         }
-    private void acabarPartida(boolean ganador) {
+    private boolean acabarPartida(boolean ganador) {
         //mostrar las combinación random en los botonesde arriba
 
             bAdivinar1.setActivated(true);
@@ -121,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             botonesAdivinar[pos].setBackgroundColor(getColor(color));
         }*/
+        return ganador;
     }
     private void reiniciar() {
         String botonID;
@@ -220,18 +223,33 @@ public class MainActivity extends AppCompatActivity {
                 terminarPartida=true;
             }
         }
-        if (acabarPartida(ganador);
+        if (acabarPartida(true)){
+            Toast.makeText(this,"GANASTE!",Toast.LENGTH_SHORT).show();
         }
+
     }
 
     private void mostrarBlancoNegro() {
         int pos = 1;
 
-        for (int i=0;i<_Master.getNegros)
-
+        for (int i=0;i<_Master.getNegros(_partidaActual);i++) {
+            @SuppressLint("DiscouragedApi")
+            Button bp = findViewById(getResources().getIdentifier("bp" + _fila + "" + (pos++), "id", getPackageName()));
+            bp.setBackgroundColor(Color.BLACK);
+            bp.setVisibility(View.VISIBLE);
+        }
+        for (int i=0;i<_Master.getBlancos(_partidaActual);i++) {
+            @SuppressLint("DiscouragedApi")
+            Button bp = findViewById(getResources().getIdentifier("bp" + _fila + "" + (pos++), "id", getPackageName()));
+            bp.setBackgroundColor(Color.GRAY);
+            bp.setVisibility(View.VISIBLE);
+        }
     }
 
     private void revelarColor(String color) {
-
+        @SuppressLint("DiscouragedApi")
+        Button b = findViewById(getResources().getIdentifier("bAdivinar" + _fila + "" + (_columna+1), "id", getPackageName()));
+        b.setBackgroundColor(toColorInt(color));
+        b.setVisibility(View.VISIBLE);
     }
 }
