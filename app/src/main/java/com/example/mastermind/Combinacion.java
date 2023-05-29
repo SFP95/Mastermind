@@ -1,5 +1,7 @@
 package com.example.mastermind;
 
+import androidx.annotation.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -76,5 +78,46 @@ public class Combinacion {
             }
         }
         return  numBlancos;
+    }
+    private int getBlancosONegros(boolean quiereBlancos, Combinacion otraCombinacion) {
+        int sol = 0;
+        int negros = 0;
+        int blancos = getNumBlacnos(otraCombinacion);
+
+        for (int i = 0; i < 4; i++) {
+            if (_combinacion[i].equals(otraCombinacion.get_combinacion()[i])) {
+                negros++;
+                blancos--;
+            }
+        }
+        return quiereBlancos ? blancos : negros;
+    }
+    public int getBlancos(Combinacion otraCombinacion) {
+        return getBlancosONegros(true, otraCombinacion);
+    }
+    public int getNegros(Combinacion otraCombinacion) {
+        return getBlancosONegros(false, otraCombinacion);
+    }
+    @NonNull
+    @Override
+    public String toString() {
+        String sol = "";
+        for (int i=0;i<4;i++) {
+            sol = sol + toString(_combinacion[i]) + " ";
+        }
+        sol += "( ";
+        for (Color color : Color.values()) {
+            sol += toString(color)+":"+_frecuencia.get(color)+" ";
+        }
+        sol += " )";
+        return sol;
+    }
+    public static String toString(Color color) {
+        String sol="";
+        if (color==Color.R)  sol = "rojo";
+        if (color==Color.G)  sol = "verde";
+        if (color==Color.B)  sol = "azul";
+        if (color==Color.Y)  sol = "amarillo";
+        return sol;
     }
 }
