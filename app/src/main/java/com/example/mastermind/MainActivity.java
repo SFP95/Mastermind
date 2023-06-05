@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     public void onComenzar(View view) {
-        reiniciar();
+        //reiniciar();
         intentos=0;
         botonesSeleccionados = new ArrayList<>();
 
@@ -115,17 +115,9 @@ public class MainActivity extends AppCompatActivity {
             bAdivinar3.setActivated(true);
             bAdivinar4.setActivated(true);
 
-        /*Button[] botonesAdivinar= { bAdivinar1, bAdivinar2, bAdivinar3, bAdivinar4};
-        botonesAdivinar.
-        for (int i=0; i<4;i++){
-            int color = listaRandomColors.get(i).getColor();
-            int pos = listaRandomColors.get(i).getPosicion();
-
-            botonesAdivinar[pos].setBackgroundColor(getColor(color));
-        }*/
         return ganador;
     }
-    private void reiniciar() {
+   /* private void reiniciar() {
         String botonID;
         Button b ;
 
@@ -170,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
     public void generarBotonesColoresRandom() {
 
         int[] colores = {Color.RED,Color.YELLOW,Color.GREEN,Color.BLUE};
@@ -185,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+/*
     public void OnAmarillo(View view) {
         pulsado("amarillo");
     }
@@ -251,5 +243,5 @@ public class MainActivity extends AppCompatActivity {
         Button b = findViewById(getResources().getIdentifier("bAdivinar" + _fila + "" + (_columna+1), "id", getPackageName()));
         b.setBackgroundColor(toColorInt(color));
         b.setVisibility(View.VISIBLE);
-    }
+    }*/
 }
